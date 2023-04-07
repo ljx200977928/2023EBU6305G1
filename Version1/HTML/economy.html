@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>economy</title>
+    <style type="text/css">
+        body{
+	margin:0px;
+	cursor:default;
+	background-color: #ffffff;
+	}
+	div{
+	width:100%;
+	height: auto;
+	background-color: #FFFFFF;
+	}
+	.message_bar{
+	height:50px;
+	background-color: #1d1d1f;
+	position:fixed;
+	text-align: right;
+	line-height: 50px;
+	
+	}
+	.message_bar_wrapper_text{
+		background-color: #1d1d1f;
+		color: rgba(255, 255, 255,1);
+		display: block;
+		line-height: 50px;
+		overflow: hidden;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		text-align: right;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+	.message_bar_wrapper_text_dark{
+		color: rgba(0, 0, 0, 1);
+		display: block;
+		line-height: 50px;
+		overflow: hidden;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		text-align: center;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+	.top_bar{
+	background-color: rgba(22, 22, 23, .88);
+	height:50px;
+	top:50px;
+	text-align: center;
+	cursor:default;
+	position:fixed;
+	overflow:hidden;
+	margin:0 auto;
+	}
+	.dropdown-content {
+    position:fixed;
+	height:0px;
+	visibility: hidden;
+  	background-color: rgba(22, 22, 23,0.88);
+	margin:0 auto;
+	}
+	.mybtn:hover .dropdown-content {
+		top:100px;
+		left:0px;
+	position:fixed;
+	width:100%;
+	height: 400px;
+		overflow:hidden;
+		visibility: visible;
+	cursor:default;
+	background-color: rgba(0, 0, 0,0.98);
+	}
+	.mybtn2:hover .dropdown-content {
+		top:100px;
+		left:0px;
+	position:fixed;
+	width:100%;
+	height: 400px;
+		overflow:hidden;
+		visibility: visible;
+	cursor:default;
+	background-color: rgba(0, 0, 0,0.98);
+	}
+	.mybtn:hover{
+		color:rgba(255,255,255,1.00);
+	}
+	.mybtn2:hover{
+		color:rgba(255,255,255,1.00);
+	}
+	.main_area{
+	background-color: #fbfbfd;
+	text-align: center;
+	z-index: -1;
+	}
+	.main_area_head{
+	height:150px;
+	background-color: #fbfbfd;
+	text-align: center;
+	position:inherit;
+	z-index: 0;
+	}
+	.main_block_dark{
+	height:1250px;
+	background-color: rgba(0, 0, 0, 0.92);
+	text-align: center;
+	position:inherit;
+	z-index: 0;
+	}
+	.main_block{
+	height:1250px;
+	background-color: rgba(255, 255, 255,1);
+	text-align: center;
+	position:inherit;
+	}
+    .text_area{
+        background-color: rgba(0,0,0,0.00);
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .img_area{
+        background-color: rgba(0,0,0,0.00);
+    }
+	.tail_area{
+	height:150px;
+	background-color: #ffffff;
+	text-align: center;
+	line-height: 50px;
+	position:absolute;
+	}
+	.tail_area_head{
+	height:600px;
+	background-color: #ffffff;
+	text-align: center;
+	line-height: 50px;
+	}
+	.mybtn{
+        height:50px;
+		background-color: rgba(0,0,0,0.00);
+		vertical-align: top;
+		color:rgba(180,180,180,1.00);
+		cursor:pointer;
+        border:none;
+		z-index: 1;
+		
+    }
+	.mybtn1{
+        width: 50px;
+        height:50px;
+		background-color:rgba(0,0,0,0.00);
+		text-align: center;
+		color:rgba(180,180,180,1.00);
+        border:none;
+		z-index: 1;
+    }
+	.mybtn2{
+        height:50px;
+		background-color: rgba(0,0,0,0.00);
+		color:rgba(180,180,180,1.00);
+		vertical-align: top;
+		cursor:pointer;
+        border:none;
+		z-index: 1;
+    }
+	.btn_homepage{
+		width: 15px;
+        height:15px;
+		text-align: center;
+        border:none;
+		cursor:pointer;
+		z-index: 1;
+	}
+	.btn_area{
+		background-color: rgba(0,0,0,0.00);
+		display: inline-block;
+	}
+</style>	
+</head>
+	
+<body>
+<div>
+	<div><div class="message_bar">
+		<div class="message_bar_wrapper_text">&lt;economy&gt;</div>
+	</div>
+  <div class="top_bar">
+		<button onclick='window.location.href=("mainpage.html")' id=0 class="mybtn1" style="margin-left:10px;">
+	  <div class="btn_homepage"style="background: url(../icon/homepage.png); background-size: contain;"></div>
+	  </button>
+		<button onclick='window.location.href=("location.html")' id=1 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>location</span>
+		<div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>1</p>
+  		</div></div>
+		
+		<button onclick='window.location.href=("history.html")' id=2 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>history</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>2</p>
+  		</div></div>
+	  
+		<button onclick='window.location.href=("culture.html")' id=3 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>culture</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>3</p>
+  		</div></div>
+	  
+		<button onclick='window.location.href=("economy.html")' id=4 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>economy</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>4</p>
+  		</div></div>
+		<button onclick='window.location.href=("ecology.html")' id=5 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>ecology</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>5</p>
+  		</div></div>
+	  
+		<button onclick='window.location.href=("celebrity.html")' id=6 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>celebrity</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>6</p>
+  		</div></div>
+	  
+		<button onclick='window.location.href=("food.html")' id=7 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>food</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>7</p>
+  		</div></div>
+	  
+		<button onclick='window.location.href=("landscape.html")' id=8 class="mybtn"style="padding-left:20px;padding-right: 20px;"><span>landscape</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>8</p>
+  		</div></div>
+	  
+		<button onclick='window.location.href=("surroundings.html")' id=9 class="mybtn2"style="padding-left:20px;padding-right: 20px;"><span>surroundings</span>
+	  <div class="dropdown"style="padding-left:30px;padding-right: 30px;"><span></span>
+  		<div class="dropdown-content">
+    	<p>9</p>
+  		</div></div>
+	  
+  </div>
+
+        <div class="main_area">
+            <div class="main_area_head"></div>
+            <div class="main_block_dark">
+                <div class="text_area">
+
+                    <P>
+                        <span style="font-size: 60px;color:#FFFFFF">Winter olympics</span>
+                    </P>
+                </div>
+
+                <div class="img_area">
+                    <p><img src="../p_economy/economy1.jpeg" width="1000" height="600" /></p>
+                </div>
+
+                <div class="text_area">
+
+                    <p style="margin-left: 200px; margin-right: 200px;"><span style="font-size: 30px;color:#FFFFFF">
+
+                            The 2022 Beijing
+                            Winter Olympics will be held in Zhangjiakou, China, which will be an opportunity for the
+                            city to
+                            comprehensively accelerate economic development. Zhangjiakou will become an important venue
+                            for
+                            the Beijing Winter Olympics, attracting a large number of domestic and foreign sports fans,
+                            tourists and media
+                            attention, promoting the development of tourism, accommodation, transportation, catering and
+                            other related industries,
+                            and driving employment growth. At the same time, the Zhangjiakou Municipal Government has
+                            also
+                            accelerated the pace of
+                            urban infrastructure construction, investing a lot of money in the improvement of urban
+                            transportation, municipal public facilities, etc., to provide better services and facilities
+                            to
+                            attract and meet new
+                            industrial needs, and further strengthen Development and modernization of the local economy.
+                            In
+                            addition, the holding of the Winter Olympics will also accelerate the development
+                            of Zhangjiakou's sports industry, improve the city's popularity, and increase the
+                            city's attractiveness .</span></p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="main_block">
+                <div class="text_area">
+
+                    <P>
+                        <span style="font-size: 60px;">Wind Farm </span>
+                    </P>
+                </div>
+
+                <div class="img_area">
+                    <p>
+                        <img src="../p_economy/economy2.jpeg" width="1000" height="600" />
+                    </p>
+                </div>
+                <div class="text_area">
+                    <p style="margin-left: 200px; margin-right: 200px;"><span style="font-size: 30px">Zhangjiakou's wind
+                            farm is one of the characteristic industries in the region, and its construction has
+                            injected
+                            strong
+                            impetus into the local economic development. Yichi Wind Farm is one of the largest mountain
+                            wind
+                            farms in China, with an
+                            annual power generation capacity of 1 billion kWh. Great Wall Renewable Energy Co., Ltd.
+                            also
+                            has an advantage in the
+                            global wind energy field and has become one of the leading wind power companies in China.
+                            The
+                            development of these
+                            enterprises has provided employment opportunities, and also promoted the development of the
+                            renewable energy industry in
+                            Zhangjiakou area, further improving the level of economic development in the area.</span>
+                    </p>
+
+                </div>
+
+
+
+                <div class="main_block_dark">
+                    <div class="text_area">
+
+                        <P>
+                            <span style="font-size: 60px;color:#FFFFFF">Steel Industry</span>
+                        </P>
+                    </div>
+                    <div class="img_area">
+                        <p>
+                            <img src="../p_economy/economy3.jpeg" width="1000" height="600">
+                        </p>
+                    </div>
+                    <div class="text_area">
+
+                        <p style="margin-left: 200px; margin-right: 200px;"><span style="font-size: 30px;color:#FFFFFF">
+
+                                Zhangjiakou
+                                has a
+                                relatively complete iron and steel industry chain, with many large iron and steel
+                                enterprises
+                                and
+                                supporting suppliers, such as Tangshan Iron and Steel, Valin Iron and Steel, etc.,
+                                forming a
+                                relatively complete
+                                industrial cluster. In recent years, with the increasing demand in domestic and foreign
+                                markets,
+                                the export volume of
+                                Zhangjiakou's iron and steel enterprises has continued to increase, driving the growth
+                                of
+                                the
+                                local economy. </span></p>
+
+                    </div>
+
+
+                    <div class="main_block">
+                        <div class="text_area">
+
+                            <P>
+                                <span style="font-size: 60px;">Agricultural Development</span>
+                            </P>
+                            <div class="img_area">
+                                <p><img src="../p_economy/economy4.jpg" width="1000" height="600" /></p>
+                            </div>
+
+                            <div class="text_area">
+                                <p style="margin-left: 200px; margin-right: 200px"><span
+                                        style="font-size: 30px;">Zhangjiakou is a
+                                        large agricultural county with rich resources of agricultural products. In
+                                        recent years,
+                                        with
+                                        the
+                                        advancement of agricultural industrialization, Zhangjiakou's agricultural
+                                        product
+                                        processing
+                                        industry has developed
+                                        rapidly, such as green bamboo shoot processing and apple processing, which have
+                                        driven
+                                        local
+                                        farmers to increase their
+                                        income.</span>
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tail_area_head">
+                            <HR width=95% SIZE=2>
+                        </div>
+                        <div class="tail_area">
+
+                            <HR width=95% SIZE=2>FROM GROUP1|Liang Jiaxin-Liu Zhuofan-Hu Kaiyi-Dong Zhenzheng-Shu
+                            Xiaoyu-Liu
+                            Daiyong
+
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+
+                    </script>
+</body>
+
+</html>

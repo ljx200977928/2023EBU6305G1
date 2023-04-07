@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>location</title>
+<style type="text/css">
+	body{
+		margin:0px;
+		cursor:default;
+		background-color: #ffffff;
+	}
+	div{
+		width:100%;
+		height: auto;
+		background-color: #FFFFFF;
+	}
+	.message_bar{
+		height:50px;
+		background-color: #1d1d1f;
+		position:fixed;
+		text-align: right;
+		line-height: 50px;
+		z-index:999;
+	}
+	.message_bar_wrapper_text{
+		background-color: #1d1d1f;
+		color: rgba(255, 255, 255,1);
+		display: block;
+		line-height: 50px;
+		overflow: hidden;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		text-align: right;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+	.message_bar_wrapper_text_dark{
+		color: rgba(0, 0, 0, 1);
+		display: block;
+		line-height: 50px;
+		overflow: hidden;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		text-align: center;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+	.top_bar{
+		background-color: rgba(22, 22, 23, .88);
+		height:50px;
+		top:50px;
+		text-align: center;
+		cursor:default;
+		position:fixed;
+		overflow:hidden;
+		z-index:999;
+	}
+	.main_area{
+		background-color: #fbfbfd;
+		text-align: center;
+		z-index: -1;
+	}
+	.main_area_head{
+		height:150px;
+		background-color: #fbfbfd;
+		text-align: center;
+		position:inherit;
+		z-index: 0;
+	}
+	.main_block_dark{
+		height:1250px;
+		background-color: rgba(0, 0, 0, 0.92);
+		text-align: center;
+		position:inherit;
+		z-index: 0;
+	}
+	.main_block{
+		height:1250px;
+		background-color: rgba(255, 255, 255,1);
+		text-align: center;
+		position:inherit;
+	}
+	.tail_area{
+		height:150px;
+		background-color: #ffffff;
+		text-align: center;
+		line-height: 50px;
+		position:absolute;
+	}
+	.tail_area_head{
+		height:600px;
+		background-color: #ffffff;
+		text-align: center;
+		line-height: 50px;
+	}
+	.mybtn{
+        height:50px;
+		background-color: rgba(0,0,0,0.00);
+		vertical-align: top;
+		color:white;
+		cursor:pointer;
+        border:none;
+		z-index:999;
+    }
+	.mybtn1{
+        width: 50px;
+        height:50px;
+		background-color:rgba(0,0,0,0.00);
+		text-align: center;
+		color:white;
+        border:none;
+		z-index:999;
+    }
+	.mybtn2{
+        height:50px;
+		background-color: rgba(0,0,0,0.00);
+		color:white;
+		vertical-align: top;
+		cursor:pointer;
+        border:none;
+		z-index:999;
+    }
+	.btn_homepage{
+		width: 15px;
+        height:15px;
+		text-align: center;
+        border:none;
+		cursor:pointer;
+		z-index:999;
+	}
+</style>	
+</head>
+	
+<body>
+<div>
+	<div><div class="message_bar">
+		<div class="message_bar_wrapper_text">&lt;location&gt;</div>
+	</div>
+	<div class="top_bar">
+		<button onclick='window.location.href=("mainpage.html")' id=0 class="mybtn1" style="margin-left:10px;">
+		<div class="btn_homepage"style="background: url(../icon/homepage.png); background-size: contain;"></div>
+		</button>
+		<button onclick='window.location.href=("location.html")' id=1 class="mybtn"style="margin-left:30px;">location</button>
+		<button onclick='window.location.href=("history.html")' id=2 class="mybtn"style="margin-left:30px;">history</button>
+		<button onclick='window.location.href=("culture.html")' id=3 class="mybtn"style="margin-left:30px;">culture</button>
+		<button onclick='window.location.href=("economy.html")' id=4 class="mybtn"style="margin-left:30px;">economy</button>
+		<button onclick='window.location.href=("ecology.html")' id=5 class="mybtn"style="margin-left:30px;">ecology</button>
+		<button onclick='window.location.href=("celebrity.html")' id=6 class="mybtn"style="margin-left:30px;">celebrity</button>
+		<button onclick='window.location.href=("food.html")' id=7 class="mybtn"style="margin-left:30px;">food</button>
+		<button onclick='window.location.href=("landscape.html")' id=8 class="mybtn"style="margin-left:30px;">landscape</button>
+		<button onclick='window.location.href=("surroundings.html")' id=9 class="mybtn2"style="margin-left:30px;">surroundings</button>
+	</div>
+	</div>
+
+	<!-- 新添代码在这下面，以上的代码没做修改。 -->
+
+	<style>
+		span{
+			float:left;
+		}
+		.block_align{
+			background-color: rgba(0,0,0,0);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.text_area,.img_area{
+			display: inline-block;
+			background-color: rgba(0,0,0,0);
+			margin-top: 100px;
+		}
+		.text_area{
+			float: left;
+			width: 50%;
+		}
+		.img_area1{
+			width: 50%;
+			top:100px;
+			float: right;
+			text-align: center;
+			position: relative;
+			background-color: transparent;
+		}
+		.img_area2{
+			width: 50%;
+			top:100px;
+			float: right;
+			text-align: center;
+			position: relative;
+			background-color: transparent;
+			height: 600px;
+		}
+		.image1{
+            width: auto;
+            height: auto;
+            max-width: 70%;
+            max-height: 70%;
+		}
+		.text_black , .text_white{
+			text-align:justify;
+			padding:50px;
+			font-size:x-large;
+		}
+		.text_black{
+			color: black;
+		}
+		.text_white{
+			color:white;
+			padding-right: 100px;
+		}
+		.focus_left,.focus_right{
+			position: absolute;
+			width: 35px;
+			height: 70px;
+			background-color: #00000050;
+			color: #ccc;
+			text-align: center;
+			line-height: 70px;
+			font-size: 27px;
+			top:250px;
+			cursor: pointer;
+		}
+		.focus_right{
+			border-radius: 5px 0 0 5px;
+			right:22px;
+		}
+		.focus_left{
+			border-radius:  0 5px 5px 0;
+			left: 22px;
+		}
+		.focus_left:hover,.focus_right:hover{
+			background-color: #000000ae;
+			color:#fff;
+		}
+		.img_set{
+			width:800px;
+		}
+		.focus_img{
+			opacity: 1;
+		}
+		.unfocus_img{
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.focusBox{
+			position: absolute;
+			width: 300px;
+			right: 210px;
+			bottom:100px;
+			background-color: transparent;
+		}
+		.focusBox>ul{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		.focusBox li{
+			width: 14px;
+			height: 14px;
+			border-radius: 100%;
+			float: left;
+			margin-right: 20px;
+			background-color:#ccc;
+		}
+		.focusBox li:hover{	
+			cursor: pointer;
+			background-color: #fff;
+		}
+		.cur{		/* 按钮样式 */
+			background-color: #fff;
+		}
+	</style>
+
+	<script>
+		//打开窗口自动开始轮播
+		window.onload=function(){
+			showPic();
+		}
+
+		//轮播函数
+		function showPic(){
+			var imgs=document.getElementById("focusing").children;
+			//定时器,自动切换
+			var time;
+			var index=0;
+			function setUp(){
+				time=setInterval(function(){	
+				index++;
+				if(index>=imgs.length){
+					index=0;
+				}
+				for(var i=0;i<imgs.length;i++){
+					imgs[i].className ="unfocus_img";
+				}
+				imgs[index].className ="focus_img";
+				},2000);
+			}
+			//左侧按钮
+			var leftBtn=document.getElementById("left");
+			leftBtn.onclick=function(){
+				clearInterval(time);
+				index--;
+				if(index<0){
+					index=imgs.length-1;
+				}
+				for(var i=0;i<imgs.length;i++){
+					imgs[i].className ="unfocus_img";
+				}
+				imgs[index].className ="focus_img";
+				setUp();
+			}
+			//右侧按钮
+			var rightBtn=document.getElementById("right");
+			rightBtn.onclick=function(){
+				clearInterval(time);
+				index++;
+				if(index>imgs.length-1){
+					index=0;
+				}
+				for(var i=0;i<imgs.length;i++){
+					imgs[i].className ="unfocus_img";
+				}
+				imgs[index].className ="focus_img";
+				setUp();
+			}
+		}
+	</script>
+	
+	<div class="main_area">
+		<div class="main_area_head"></div>
+		<div class="main_block_dark">	<!--block1 dark-->
+			<div class="block_align">
+				<div class="img_area1">
+					<img src="../p_location/location-1.jpg" class="image1">
+				</div>
+				<div class="text_area">
+					<span class="text_white">
+						<b><i>
+							&nbsp&nbsp&nbsp&nbsp
+							Located in North China, Hebei Province is a province with diverse topography and rich culture.
+							The geographical location of Hebei Province is between 113°27' and 119°50' east longitude and 36°05' and 42°40' north latitude.
+							Located between the Inner Mongolia Plateau and the North China Plain, the terrain slopes from northwest to southeast, with mountains, hills and plateaus in the northwest and vast plains in the center and southeast.
+							The province covers an area of 188,800 square kilometers, of which 70% is plain. Hebei Province is surrounded by Beijing, the capital city, Tianjin, an important commercial port in the north, and the Bohai Sea in the east.
+							This position makes Hebei an important hub connecting North and northeast China.
+						</i></b>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="main_block">	<!--block2 white-->
+			<div class="block_align">
+				<div class="text_area">
+					<span class="text_black">
+						<b><i>
+							&nbsp&nbsp&nbsp&nbsp
+							The topography of Hebei Province is diverse, including plateaus, plains, mountains, basins, deserts, hills, lakes and beaches.
+							Located in the northern part of Hebei Province, Yanshan Mountain is the boundary between plateau and plain, and the throat between northeast and North China.
+							It is formed by the geological uplift of the earth's crust. There are other famous mountains in Hebei, such as Taihang Mountain, Yanshan Mountain and Hengshan Mountain.
+							These mountains not only bring natural beauty to Hebei Province, but also help prevent desertification.
+							The basins and valleys of Hebei Province are mainly distributed in the northwest, such as Shijiazhuang Basin and Handan Basin.
+							These topographic features make Hebei Province very rich in natural scenery and natural resources.
+						</i></b>
+					</span>
+				</div>
+				<div class="img_area2">
+					<div id="focusing">
+						<div class="focus_img" id="imgs"><img src="../p_location/index/1.jpg" class="img_set"></div>
+						<div class="unfocus_img" id="imgs"><img src="../p_location/index/2.jpg" class="img_set"></div>
+						<div class="unfocus_img" id="imgs"><img src="../p_location/index/3.jpg" class="img_set"></div>
+						<div class="unfocus_img" id="imgs"><img src="../p_location/index/4.jpg" class="img_set"></div>
+						<div class="unfocus_img" id="imgs"><img src="../p_location/index/5.jpg" class="img_set"></div>
+						<div class="unfocus_img" id="imgs"><img src="../p_location/index/6.jpg" class="img_set"></div>
+					</div>
+						
+					<div class="focus_left" id="left">&lt;</div>
+					<div class="focus_right" id="right">&gt;</div>
+					<div class="focusBox">
+						<ul>
+							<li class=""></li>
+							<li class=""></li>
+							<li class=""></li>
+							<li class=""></li>
+							<li class=""></li>
+							<li class=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_block_dark">		<!--block3 dark-->
+			<div class="block_align">
+				<div class="img_area1">
+					<img src="../p_location/location-3.jpg" class="image1">
+				</div>
+				<div class="text_area">
+					<span class="text_white">
+						<b><i>
+							&nbsp&nbsp&nbsp&nbsp
+							As an important birthplace of the Chinese civilization, 
+							Hebei Province has formed a rich and unique culture after thousands of years of accumulation, 
+							and has become a province with real cultural resources. 
+							The province now has 34,046 immovable cultural relics and 3 and 5 world cultural heritage sites, 
+							including the Great Wall, the Summer Resort and its surrounding temples, 
+							the Eastern Qing Tombs and the Western Qing Tombs.
+						</i></b>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="main_block">	<!--block4 white-->
+			<div class="block_align">
+				<div class="text_area">
+					<span class="text_black">
+						<b><i>
+							&nbsp&nbsp&nbsp&nbsp
+							There are many natural sceneries in Hebei Province,
+							among which Baiyangdian is the most famous. 
+							Baiyangdian is the largest lake on China's Haihe Plain, 
+							located in central Hebei Province. 
+							Baiyangdian Lake is formed by the confluence of the alluvial fans of Yongding River 
+							and Hutuo River in front of Taihang Mountain. 
+							At present, there are 143 large and small lakes, of which Baiyang Lake, 
+							Shaoche Lake, Yangjiao Lake, Chiyu Lake, Houtang Lake and so on are the largest,
+							which is generally called Baiyang Lake. It has an area of 336 square kilometers. 
+							It receives Puhe River, Tang River, Caohe River, 
+							Schilong River and other rivers from the north, west and south. 
+							The average water storage capacity is 1.32 billion cubic meters. 
+							Rich in aquatic resources, there are more than 50 kinds of freshwater fish,
+							and a large area of reed and acres of contiguous lotus lake is famous, 
+							known as the pearl of North China.
+						</i></b>
+					</span>
+				</div>
+				<div class="img_area1">
+					<img src="../p_location/location-4.jpg" class="image1">
+				</div>
+			</div>
+		</div>
+		<div class="main_block_dark">		<!--block5 dark-->
+			<div class="block_align">
+				<div class="img_area1">
+					<img src="../p_location/location-5.jpg" class="image1">
+				</div>
+				<div class="text_area">
+					<span class="text_white">
+						<b><i>
+							&nbsp&nbsp&nbsp&nbsp
+							There are many famous historical and cultural cities in Hebei Province, 
+							such as Handan, Baoding, Chengde, Zhengding and Shanhaiguan. 
+							These cities have a long history and unique cultural deposits, 
+							is an important part of tourism resources in Hebei Province.
+
+							All in all, Hebei Province is a province rich in natural resources and cultural heritage. 
+							For tourists, Hebei Province can not only enjoy the beautiful natural scenery,
+							but also learn about the rich history and culture.
+						</i></b>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="tail_area_head">
+			<HR width=95% SIZE=2>
+		</div>
+		<div class="tail_area">
+			<HR width=95% SIZE=2>FROM GROUP1|Liang Jiaxin-Liu Zhuofan-Hu Kaiyi-Dong Zhenzheng-Shu Xiaoyu-Liu Daiyong
+		</div>
+	</div>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
