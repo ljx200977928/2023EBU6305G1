@@ -1,0 +1,1466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>food</title>
+<style type="text/css">
+	body {
+            margin: 0px;
+            cursor: default;
+            background-color: #ffffff;
+            z-index: -2;
+            position: relative;
+        }
+
+        div {
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.00);
+        }
+
+        .message_bar {
+            height: 50px;
+            background-color: #1d1d1f;
+            position: fixed;
+            text-align: right;
+            line-height: 50px;
+            z-index: 99999;
+        }
+
+        .message_bar_wrapper_text {
+            background-color: #1d1d1f;
+            color: rgba(255, 255, 255, 1);
+            display: block;
+            line-height: 50px;
+            overflow: hidden;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            text-align: right;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .message_bar_wrapper_text_dark {
+            color: rgba(0, 0, 0, 1);
+            display: block;
+            line-height: 50px;
+            overflow: hidden;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            text-align: center;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .top_bar {
+            background-color: rgba(22, 22, 23, .88);
+            height: 50px;
+            top: 50px;
+            text-align: center;
+            cursor: default;
+            position: fixed;
+            overflow: hidden;
+            margin: 0 auto;
+            z-index: 99999;
+        }
+
+        .dropdown-content1 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content2 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content3 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content4 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content5 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content6 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content7 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content8 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-content9 {
+            position: fixed;
+            height: 100px;
+            background-color: rgba(22, 22, 23, 0.88);
+            margin: 0 auto;
+            text-align: center;
+            visibility: hidden;
+            z-index: 10;
+            transition: height 1s;
+        }
+
+        .dropdown-background {
+            position: fixed;
+            visibility: hidden;
+            z-index: 10;
+            height: 0%;
+            cursor: default;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            transition: backdrop-filter 1s;
+        }
+
+        .mybtn1:hover .dropdown-content1 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 370px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn2:hover .dropdown-content2 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 450px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn3:hover .dropdown-content3 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 330px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn4:hover .dropdown-content4 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 380px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn5:hover .dropdown-content5 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 500px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn6:hover .dropdown-content6 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 330px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn7:hover .dropdown-content7 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 460px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn8:hover .dropdown-content8 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 340px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+	.mybtn9:hover .dropdown-content9 {
+		top: 100px;
+		left: 0px;
+		position: fixed;
+		width: 100%;
+		height: 460px;
+		overflow: hidden;
+		cursor: default;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: height 1s;
+	}
+
+
+        .mybtn1:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn2:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn3:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn4:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+        
+        .mybtn5:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn6:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn7:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn8:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+
+        .mybtn9:hover .dim {
+            color: darkgrey;
+            transition: color 1s;
+        }
+        .mybtn1:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn2:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn3:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn4:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn5:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn6:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn7:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn8:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }.mybtn9:hover .dim:hover{
+            color: rgba(255, 255, 255, 1);
+            transition: color 0.01s;
+        }
+        .mybtn1:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn2:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn3:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn4:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn5:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn6:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn7:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn8:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn9:hover .dropdown_context_head {
+            color: grey;
+            transition: color 1s;
+        }
+
+        .mybtn1:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn2:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn3:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn4:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn5:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn6:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn7:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn8:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn9:hover {
+            color: rgba(255, 255, 255, 1.00);
+        }
+
+        .mybtn1:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn2:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn3:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn4:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn5:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn6:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn7:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn8:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn9:hover .dropdown-background {
+            top: 100px;
+            left: 0px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 29, 31, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 2;
+            visibility: visible;
+            transition: background-color 1s;
+        }
+
+        .mybtn1:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn2:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn3:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn4:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn5:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn6:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn7:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn8:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn9:has(.dropdown-background:hover) {
+            color: rgba(180, 180, 180, 1.00);
+            transition: color 0.2s;
+        }
+
+        .mybtn1:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn2:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn3:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn4:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn5:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn6:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn7:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn8:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn9:hover .dropdown-background:hover {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: none;
+            visibility: hidden;
+            transition: background-color 0.5s;
+            transition: backdrop-filter 0.5s;
+            transition: visibility 0.5s;
+        }
+
+        .mybtn1:hover .dropdown-background:hover+.dropdown-content1 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn2:hover .dropdown-background:hover+.dropdown-content2 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn3:hover .dropdown-background:hover+.dropdown-content3 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn4:hover .dropdown-background:hover+.dropdown-content4 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn5:hover .dropdown-background:hover+.dropdown-content5 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn6:hover .dropdown-background:hover+.dropdown-content6 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn7:hover .dropdown-background:hover+.dropdown-content7 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn8:hover .dropdown-background:hover+.dropdown-content8 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn9:hover .dropdown-background:hover+.dropdown-content9 {
+            height: 0px;
+            transition: height 0.5s;
+        }
+
+        .mybtn1:hover .dropdown-background:hover+.dropdown-content1>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn2:hover .dropdown-background:hover+.dropdown-content2>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn3:hover .dropdown-background:hover+.dropdown-content3>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn4:hover .dropdown-background:hover+.dropdown-content4>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn5:hover .dropdown-background:hover+.dropdown-content5>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn6:hover .dropdown-background:hover+.dropdown-content6>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn7:hover .dropdown-background:hover+.dropdown-content7>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn8:hover .dropdown-background:hover+.dropdown-content8>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn9:hover .dropdown-background:hover+.dropdown-content9>.dropdown_context_head {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn1:hover .dropdown-background:hover+.dropdown-content1>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn2:hover .dropdown-background:hover+.dropdown-content2>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn3:hover .dropdown-background:hover+.dropdown-content3>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn4:hover .dropdown-background:hover+.dropdown-content4>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn5:hover .dropdown-background:hover+.dropdown-content5>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn6:hover .dropdown-background:hover+.dropdown-content6>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn7:hover .dropdown-background:hover+.dropdown-content7>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn8:hover .dropdown-background:hover+.dropdown-content8>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .mybtn9:hover .dropdown-background:hover+.dropdown-content9>.dropdown_context {
+            color: rgba(0, 0, 0, 0.00);
+            visibility: hidden;
+            transition: color 0.5s;
+            transition: visibility 0.5;
+        }
+
+        .main_area {
+            top:150px;
+            background-color: #fbfbfd;
+            text-align: center;
+            position:relative;
+            z-index: -1;
+        }
+
+        .main_area_head {
+            height: 150px;
+            background-color: #fbfbfd;
+            text-align: center;
+            position: fixed;
+            z-index: 0;
+        }
+
+        .main_block_dark {
+            height: 1250px;
+            background-color: rgba(0, 0, 0, 0.92);
+            text-align: center;
+            position: inherit;
+            z-index: 0;
+        }
+
+        .main_block {
+            height: 1250px;
+            background-color: rgba(255, 255, 255, 1);
+            text-align: center;
+            position: inherit;
+        }
+
+        .text_area {
+            background-color: rgba(0, 0, 0, 0.00);
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .img_area {
+            background-color: rgba(0, 0, 0, 0.00);
+        }
+
+        .tail_area {
+            height: 150px;
+            background-color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+        }
+
+        .tail_area_head {
+            height: 600px;
+            background-color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .mybtn0 {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            text-align: center;
+            color: rgba(180, 180, 180, 1.00);
+            border: none;
+            z-index: 99999;
+
+        }
+
+        .mybtn1 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn2 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn3 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn4 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn5 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn6 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn7 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn8 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            vertical-align: top;
+            color: rgba(180, 180, 180, 1.00);
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .mybtn9 {
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.00);
+            color: rgba(180, 180, 180, 1.00);
+            vertical-align: top;
+            cursor: pointer;
+            border: none;
+            z-index: 99999;
+            transition: color 0.2s;
+        }
+
+        .btn_homepage {
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            z-index: 99999;
+        }
+
+        .btn_area {
+            background-color: rgba(0, 0, 0, 0.00);
+            display: inline-block;
+            z-index: 99999;
+        }
+
+        .dropdown_context_head {
+            padding-top: 10px;
+            color: rgba(0, 0, 0, 0.00);
+            background-color: rgba(0, 0, 0, 0.00);
+            display: block;
+            overflow: hidden;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            text-align: left;
+            margin-left: 35%;
+        }
+
+        .dropdown_context {
+            padding-top: 10px;
+            color: rgba(0, 0, 0, 0.00);
+            background-color: rgba(0, 0, 0, 0.00);
+            display: block;
+            overflow: hidden;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            text-align: left;
+            margin-left: 35%;
+        }
+
+        .text_title {
+            color: #28282985;
+            background-color: rgba(0, 0, 0, 0.00);
+            padding-top: 800px;
+            padding-bottom: 50px;
+            font-size: 50px;
+            transition: font-size 1s;
+        }
+
+        .main_block_dark:hover .text_title {
+            font-size: 200px;
+            transition: font-size 1s;
+        }
+
+        .dropdown-background:hover~.text_title {
+            font-size: 200px;
+            color: #cccbcb50;
+            padding-top: 50px;
+            transition: font-size 1s;
+            transition: padding-top 1s;
+            transition: color 1s;
+        }
+        .text_head{
+            padding-top: 80px;
+        }
+        .dim{
+            background-color: rgba(0, 0, 0, 0.00);
+            color:rgba(0, 0, 0, 0.00);
+        }
+
+		.video{
+			text-align: center;
+		}
+
+		video:hover {
+			cursor: pointer;
+		}
+
+		.text_area{
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			font-style: italic;
+		}
+
+		.img_area {
+			position: relative;
+			z-index: 99999;
+			opacity: 0; /* 初始透明度为0 */
+			transition: opacity 1s ease-in-out; /* 过渡效果，1秒内淡入淡出 */
+		}
+
+		.main_block:hover .img_area{
+ 		 opacity: 1; /* 鼠标悬停时透明度为1，即完全不透明 */
+	    }
+
+        .main_block_dark:hover .img_area{
+ 		 opacity: 1; /* 鼠标悬停时透明度为1，即完全不透明 */
+	    }
+		
+		.main_block1 {
+            height: 600px;
+            background-color: rgba(255, 255, 255, 0);
+            text-align: center;
+            position: inherit;
+            transition: height 1s;
+        }
+
+        .main_block1:hover{
+            height:1200px;
+        }
+
+        *  { padding: 0 auto;margin: 0 auto;box-sizing: content-box;}
+
+        ul { padding-inline-start: 0px; }
+        li { list-style: none; }
+
+        /* 图片轮播块 */
+
+        .rotation-container { width: 100%; position: relative; margin: 0px; }
+
+        .rotation_ul,.rotation-item {padding-bottom: 0px;}
+
+        .rotation-item { 
+            position: absolute;
+            width: 100%;
+            background-size: 100%;
+            animation: fade 20s linear;
+            animation-iteration-count: infinite;
+        }
+
+        /* 设置背景图片 */
+        .rotation-item1 { background-image: url(../p_food/cgbxr.jpeg);height:1200px; }
+        .rotation-item2 { background-image: url(../p_food/clbc.jpg);height:1200px; }
+        .rotation-item3 { background-image: url(../p_food/mjsb.jpg);height:1200px; }
+        .rotation-item4 { background-image: url(../p_food/sbyr.jpg);height:1200px; }
+        .rotation-item5 { background-image: url(../p_food/ymww.jpg);height:1200px; }
+        .rotation-item6 { background-image: url(../p_food/ymyy.jpg);height:1200px; }
+        .rotation-item7 { background-image: url(../p_food/yrc.jpg);height:1200px; }
+
+        /* 设置动画 */
+        @keyframes fade {
+            0% {opacity: 0;}
+            5% {opacity: 1;}
+            20% {opacity: 1;}
+            25% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+
+        .rotation-item  { opacity: 0; }
+        .rotation-item1 { animation-delay: -1s; }
+        .rotation-item2 { animation-delay: 3s; }
+        .rotation-item3 { animation-delay: 7s; }
+        .rotation-item4 { animation-delay: 11s; }
+        .rotation-item5 { animation-delay: 15s; }
+        .rotation-item6 { animation-delay: 19s; }
+        .rotation-item7 { animation-delay: 23s; }
+
+        .picture img {height: 1200px;width: 100%;}
+</style>	
+</head>	
+<body>	
+<div class="message_bar">
+		<div class="message_bar_wrapper_text">&lt;food&gt;</div>
+</div>
+<div class="top_bar">
+	<button onclick='window.location.href=("mainpage.html")' id=0 class="mybtn0" style="margin-left:10px;">
+		<div class="btn_homepage" style="background: url(../icon/homepage.png); background-size: contain;">
+		</div>
+	</button>
+	<button id=1 class="mybtn1" style="padding-left:20px;padding-right: 20px;">
+        <span onclick='window.location.href=("location.html")'>location</span>
+        <div class="dropdown-background"></div>
+        <div class="dropdown-content1">
+            <div class="dropdown_context_head" style="margin-top: 40px;">
+                <span style="font-size: 24px;">location</span><br>
+            </div>
+            <div class="dropdown_context">
+                <a onclick='window.location.href=("location.html#location1")'><span class="dim" style="font-size: 30px;">Geographical location</span><br></a>
+            </div>
+            <div class="dropdown_context">
+                <a onclick='window.location.href=("location.html#location2")'><span class="dim" style="font-size: 30px;">Terrain and natural beauty</span><br></a>
+            </div>
+            <div class="dropdown_context">
+                <a onclick='window.location.href=("location.html#location3")'><span class="dim" style="font-size: 30px;">Cultural heritage</span><br></a>
+            </div>
+            <div class="dropdown_context">
+                <a onclick='window.location.href=("location.html#location4")'><span class="dim" style="font-size: 30px;">Famous scenic spot: Baiyangdian Lakee</span><br></a>
+            </div>
+            <div class="dropdown_context" style="margin-bottom: 40px;">
+                <a onclick='window.location.href=("location.html#location5")'><span class="dim" style="font-size: 30px;">Long history and culture</span><br></a>
+            </div>
+        </div>
+
+        <button id=2 class="mybtn2" style="padding-left:20px;padding-right: 20px;"><span
+            onclick='window.location.href=("history.html")'>history</span>
+        <div class="dropdown-background"></div>
+        <div class="dropdown-content2">
+            <div class="dropdown_context_head" style="margin-top: 40px;"><span
+                    style="font-size: 24px;">BLOCKS:</span><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter1")'><span
+                class="dim"style="font-size: 30px;">Origination
+                    </span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter2")'><span
+                class="dim"style="font-size: 30px;">Qin & Han
+                    </span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter3")'><span
+                class="dim"style="font-size: 30px;">Tang & Song
+                    </span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter4")'><span
+                class="dim"style="font-size: 30px;">Ming & Qing
+                    </span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter5")'><span
+                class="dim"style="font-size: 30px;">Republic of China</span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter6")'><span
+                class="dim"style="font-size: 30px;">Early PRC
+                        </span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("history.html#chapter7")'><span
+                class="dim"style="font-size: 30px;">Since the Reform and Opening-up</span></a><br></div>
+        </div>
+
+        <button id=3 class="mybtn3"style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("culture.html")'>culture</span>
+        <div class="dropdown-background"></div>
+        <div class="dropdown-content3">
+            <div class="dropdown_context_head" style="margin-top: 40px;"><span
+                style="font-size: 24px;">BLOCKS:</span><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("culture.html#chapter1")'><span class="dim"style="font-size: 30px;">Yuxian paper cutting</span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("culture.html#chapter2")'><span class="dim"style="font-size: 30px;">Yuxian dozen tree flowers</span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("culture.html#chapter3")'><span class="dim"style="font-size: 30px;">Lantern mountain</span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("culture.html#chapter4")'><span class="dim"style="font-size: 30px;">Yuxian Yangko</span></a><br></div>
+        </div>
+
+
+    <button id=4 class="mybtn4" style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("economy.html")'>economy</span>
+        <div class="dropdown-background"></div>
+        <div class="dropdown-content4">
+            <div class="dropdown_context_head" style="margin-top: 40px;"><span style="font-size: 24px;">BLOCKS:</span><br></div>
+            <div class="dropdown_context">
+                <!-- <a onclick='window.location.href=("#chapter1")'><span class="dim"style="font-size: 30px;">Winter olympics</span></a><br> -->
+                <a onclick='window.location.href=("economy.html#chapter1")'><span class="dim"style="font-size: 30px;">Winter olympics</span></a><br>
+            </div>
+            <div class="dropdown_context">
+                <a onclick='window.location.href=("economy.html#chapter2")'><span class="dim"style="font-size: 30px;">Wind Farm</span></a><br>
+            </div>
+            <div class="dropdown_context"><span class="dim"style="font-size: 30px;">
+                <a onclick='window.location.href=("economy.html#chapter3")'>Steel Industry</a></span><br>
+            </div>
+            <div class="dropdown_context"><span class="dim"style="font-size: 30px;">
+                <a onclick='window.location.href=("economy.html#chapter4")'>Agricultural Development</a></span><br>
+            </div>
+            <div class="dropdown_context"><span class="dim"style="font-size: 30px;">
+                <a onclick='window.location.href=("economy.html#chapter5")'>Equipment Manufacturing</a></span><br>
+            </div>
+        </div>
+
+
+    <button id=5 class="mybtn5" style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("ecology.html")'>ecology</span>
+        <div class="dropdown-background"></div>
+        <div class="dropdown-content5">
+            <div class="dropdown_context_head" style="margin-top: 40px;">
+                <span style="font-size: 24px;">BLOCKS:</span><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter1")'>
+                <span class="dim"style="font-size: 30px;">E-commerce Devleopemnt</span></a><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter2")'>
+                <span class="dim"style="font-size: 30px;">Green chemical industrial Park
+                </span></a><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter3")'>
+                <span class="dim"style="font-size: 30px;">Natural ResourceProtection
+                    </span></a><br></div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter4")'>
+                <span class="dim"style="font-size: 30px;">"Three North" shelter forest</span></a><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter5")'>
+                <span class="dim"style="font-size: 30px;">Air Pollution Prevention</span></a><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter6")'>
+                <span class="dim"style="font-size: 30px;">Water Pollution Prevention</span></a><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter7")'>
+                <span class="dim"style="font-size: 30px;">Grassland Road Prevention</span></a><br>
+            </div>
+            <div class="dropdown_context"><a onclick='window.location.href=("ecology.html#chapter8")'>
+                <span class="dim"style="font-size: 30px;">Guanting Reservoir National Wetland Park </span></a><br>
+            </div>
+        </div>
+
+
+        <button id=6 class="mybtn6"
+            style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("celebrity.html")'>celebrity</span>
+            <div class="dropdown-background"></div>
+            <div class="dropdown-content6">
+                <div class="dropdown_context_head" style="margin-top: 40px;"><span
+                    style="font-size: 24px;">BLOCKS:</span><br></div>
+                <div class="dropdown_context"><a onclick='window.location.href=("celebrity.html#chapter1")'><span class="dim"style="font-size: 30px;">Ma Baoyu
+                </span></a><br></div>
+                <div class="dropdown_context"><a onclick='window.location.href=("celebrity.html#chapter2")'><span class="dim"style="font-size: 30px;">Man Gui
+                </span></a><br></div>
+                <div class="dropdown_context"><a onclick='window.location.href=("celebrity.html#chapter3")'><span class="dim"style="font-size: 30px;">Qin Kai
+                </span></a><br></div>
+                <div class="dropdown_context" style="margin-bottom: 40px;"><a onclick='window.location.href=("celebrity.html#chapter4")'><span class="dim"style="font-size: 30px;">Dong Cunrui
+                </span></a><br></div>
+            </div>
+
+        <button id=7 class="mybtn7"
+            style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("food.html")'>food</span>
+            <div class="dropdown-background"></div>
+            <div class="dropdown-content7">
+                <div class="dropdown_context_head" style="margin-top: 40px;"><span
+                    style="font-size: 24px;">BLOCKS:</span><br></div>
+                <div class="dropdown_context"><a onclick='window.location.href=("food.html#chapter1")'><span class="dim"style="font-size: 30px;">Sesame sauce baked cakes
+                </span></a><br>
+                </div>
+                <div class="dropdown_context"><a onclick='window.location.href=("food.html#chapter2")'><span class="dim"style="font-size: 30px;">Chinese cabbage boiled yam
+                </span></a><br>
+                </div>
+                <div class="dropdown_context"><a onclick='window.location.href=("food.html#chapter3")'><span class="dim"style="font-size: 30px;">Charcoal kebabs
+                </span></a><br>
+                </div>
+                <div class="dropdown_context"><a onclick='window.location.href=("food.html#chapter4")'><span class="dim"style="font-size: 30px;">Sumena
+                </span></a><br>
+                </div>
+                <div class="dropdown_context"><a onclick='window.location.href=("food.html#chapter5")'><span class="dim"style="font-size: 30px;">Stir-fried fish with noodles
+                </span></a><br>
+                </div>
+                <div class="dropdown_context"><a onclick='window.location.href=("food.html#chapter6")'><span class="dim"style="font-size: 30px;">Chaigou Fort bacon
+                </span></a><br>
+                </div>
+                <div class="dropdown_context" style="margin-bottom: 40px;"><a onclick='window.location.href=("food.html#chapter7")'><span
+                    class="dim"style="font-size: 30px;">Zhangjiakou hands on meat</span></a><br></div>
+            </div>
+
+            <button id=8 class="mybtn8" style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("landscape.html")'>landscape</span>
+                <div class="dropdown-background"></div>
+                <div class="dropdown-content8">
+                    <div class="dropdown_context_head" style="margin-top: 40px;"><span style="font-size: 24px;">Blocks:</span><br></div>
+                    <div class="dropdown_context"><a onclick='window.location.href=("landscape.html#Lchapter1")'><span class="dim"style="font-size: 30px;">Great Gate of Great Wall and ancient town Shuo Lou</span></a><br></div>
+                    <div class="dropdown_context"><a onclick='window.location.href=("landscape.html#Lchapter2")'><span class="dim"style="font-size: 30px;">Film and television industry base and Wanlong Ski Resort</span></a><br></div>
+                    <div class="dropdown_context"><a onclick='window.location.href=("landscape.html#Lchapter3")'><span class="dim"style="font-size: 30px;">Zhangbei CountyGrassland Tianlu, Yuanzhong capital site</span></a><br></div>
+                    <div class="dropdown_context" style="margin-bottom: 40px;"><a onclick='window.location.href=("landscape.html#Lchapter4")'><span class="dim"style="font-size: 30px;">Yu County Weizhou ancient city, Jade Emperor Pavilion</span></a><br></div>
+                </div>
+
+
+                <button  id=9 class="mybtn9"style="padding-left:20px;padding-right: 20px;"><span onclick='window.location.href=("surroundings.html")'>surroundings</span>
+                    <div class="dropdown-background"></div>
+                        <div class="dropdown-content9">
+                          <div class="dropdown_context_head"style="margin-top: 40px;"><span style="font-size: 27px;">Blocks:</span><br></div>
+                          
+                          <div class="dropdown_context"><a onclick='window.location.href=("surroundings.html#Schapter1")'><span class="dim"style="font-size: 30px;">Municipal district Part 1</span></a><br></div>
+                          <div class="dropdown_context"><a onclick='window.location.href=("surroundings.html#Schapter2")'><span class="dim"style="font-size: 30px;">Municipal district Part 2</span></a><br></div>
+                          <div class="dropdown_context"><a onclick='window.location.href=("surroundings.html#Schapter3")'><span class="dim"style="font-size: 30px;">Zhangbei and Kangbao County</span></a><br></div>
+                          <div class="dropdown_context"><a onclick='window.location.href=("surroundings.html#Schapter4")'><span class="dim"style="font-size: 30px;">Guyuan and Shangyi county</span></a><br></div>
+                          <div class="dropdown_context"><a onclick='window.location.href=("surroundings.html#Schapter5")'><span class="dim"style="font-size: 30px;">Wei and Yangyuan county</span></a><br></div>
+                          <div class="dropdown_context"><a onclick='window.location.href=("surroundings.html#Schapter6")'><span class="dim"style="font-size: 30px;">Huaian and Zhuolu county</span></a><br></div>
+                          <div class="dropdown_context" style="margin-bottom: 40px;"><a onclick='window.location.href=("surroundings.html#Schapter7")'><span class="dim"style="font-size: 30px;">Chicheng and Huailai county</span></a><br></div>
+                        </div>	
+			</div>
+</div>
+<div class="main_area">
+		<div class="main_area_head"></div>
+		<div class="main_block1">
+            <div class="rotation-container">
+                <!-- 轮播器 -->
+                <div>
+                    <ul class="rotation_ul">
+                        <li class="rotation-item rotation-item1"></li>
+                        <li class="rotation-item rotation-item2"></li>
+                        <li class="rotation-item rotation-item3"></li>
+                        <li class="rotation-item rotation-item4"></li>
+                        <li class="rotation-item rotation-item5"></li>
+                        <li class="rotation-item rotation-item6"></li>
+                        <li class="rotation-item rotation-item7"></li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+		<div class="main_block_dark" id="chapter1" style="background-color: #1d1d1f;">	
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p><span style="font-size: 50px;color:#FFFFFF"><strong>Sesame sauce baked cakes</strong></span></p ></div> 
+			<div class="img_area"><p><img src="../p_food/mjsb.jpg" width="800" height="450"/></p ></div>  
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;color:#FFFFFF"><span style="font-size: 30px;">
+				One of the most common breakfasts, a mouthful full of fragrant wood. The essential staple food after shabu mutton and hot pot is woody, I like to eat layer by layer, first eat all the sesame seeds, especially fragrant, and then squeeze the vegetables, especially enjoy!</span></p ></div>  
+		</div>
+		<div class="main_block" id="chapter2">
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p><span style="font-size: 50px;"><strong>Chinese cabbage boiled yam</strong></span></p > </div>
+				<div class="img_area"><p><img src="../p_food/clbc.jpg" width="800" height="450"/></p ></div>
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;"><span style="font-size: 30px;">Tender cabbage with soft potatoes, boiled rotten paste, add a little chili oil not to mention how fragrant, I eat a big plate at a time! Boiling vegetables is the great love of Zhangjiakou people, more retains the taste of the dish itself, less oil, and easy to digest!</span></p ></div>  
+		</div>
+		<div class="main_block_dark" id="chapter3">
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p style="padding-top: 30px;padding-bottom: 30px;"><span style="font-size: 50px;color:#FFFFFF"><strong>Charcoal kebabs</strong></span></p > </div>
+			<div class="img_area"><p><img src="../p_food/yrc.jpg" width="800" height="450"/></p > </div>
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;padding-top:30px;color:#FFFFFF"><span style="font-size: 30px;">Seeing the barbecue stalls on the streets and alleys every summer, you know that the lamb kebabs in Zhangjiakou are popular, the key is that our lamb is good, the little sheep on the grassland on the dam! In addition to lamb kebabs, there are also lamb loins and lamb liver.</span></p ></div>  
+		</div>
+		<div class="main_block" id="chapter4">
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p><span style="font-size: 50px;"><strong>Sumena</strong></span></p > </div>
+			<div class="img_area"><p><img src="../p_food/ymww.jpg" width="800" height="450"/></p > </div>
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;"><span style="font-size: 30px;">There are many ways to eat, Sumen wowo, Sumen fish, cold mixed noodles, fried noodles, Sumen noodles to take the cake sea, Sumen wo to mix a variety of boiled vegetables to eat, or dip in mutton soup to eat, eat can't stop, but can be leisurely, Sumen noodles are not easy to digest, you can eat less at night!</span></p >  </div>
+		</div>
+		<div class="main_block_dark" id="chapter5">
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p style="padding-top: 30px;padding-bottom: 30px;"><span style="font-size: 50px;color:#FFFFFF"><strong>Stir-fried fish with noodles</strong></span></p > </div>
+			<div class="img_area"><p><img src="../p_food/ymyy.jpg" width="800" height="450"/></p > </div>
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;padding-top:30px;color:#FFFFFF"><span style="font-size: 30px;">Each family has different recipes, but I think that no matter how you stir-fry, you put less vinegar and add some chili oil, which is a delicious taste. The biggest feature of the fish is that it has a chewy head, which fully shows the taste and aroma of the noodles!</span></p ></div>  
+		</div>
+		<div class="main_block" id="chapter6">
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p><span style="font-size: 50px;"><strong>Chaigou Fort bacon</strong></span></p ></div>
+			<div class="img_area"><p><img src="../p_food/cgbxr.jpeg" width="800" height="450"/></p ></div>
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;"><span style="font-size: 30px;">That's definitely famous, using good pork belly flowers, fat but not greasy! Excellent appetizers! However, my favorite is the bacon spring cake, sliced bacon, finely cut cucumber, shredded green onion, made into a bowl of sweet noodle sauce, served with thin spring cakes, rolled and eaten!</span></p >  </div>
+		</div>
+		<div class="main_block_dark" id="chapter7">
+            <div class="text_head"></div>
+            <div class="text_head"></div>
+			<div class="text_area"><p style="padding-top: 30px;padding-bottom: 30px;"><span style="font-size: 50px;color:#FFFFFF"><strong>Zhangjiakou hands on meat</strong></span></p > </div>
+			<div class="img_area"><p><img src="../p_food/sbyr.jpg" width="800" height="450"/></p > </div>
+			<div class="text_area"><p style="margin-left: 200px; margin-right: 200px;padding-top:30px;color:#FFFFFF"><span style="font-size: 30px;">This used to be the famous food of the Qing royal mansion, also called "hand steak meat", optional lamb chops and lamb leg, the former fat and lean, the latter pure lean meat, fat but not greasy, no smell, you can also eat dipping sauce, leek flowers, garlic paste soy sauce, depending on your taste.</span></p ></div>  
+		</div>
+</div>	
+<div class="tail_area_head">
+		<HR width=95% SIZE=2>
+</div>
+<div class="tail_area">
+		
+		<HR width=95% SIZE=2>FROM GROUP1|Liang Jiaxin-Liu Zhuofan-Hu Kaiyi-Dong Zhenzheng-Shu Xiaoyu-Liu Daiyong
+		
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>
