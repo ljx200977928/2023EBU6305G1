@@ -8,4 +8,4 @@ Liu Daiyong,2020213259,200978110,jp2020213259@qmul.ac.uk
 Hu Kaiyi,2020213254,200977434,jp2020213254@qmul.ac.uk
 Dong Zhenzheng,2020213251,200977076,jp2020213251@qmul.ac.uk
 Liu Zhuofan,2020213260,200978121,jp2020213260@qmul.ac.uk
-##Assigned TA:Yiding Zhao zhaoyiding@bupt.edu.cn
+## Assigned TA:Yiding Zhao zhaoyiding@bupt.edu.cn
